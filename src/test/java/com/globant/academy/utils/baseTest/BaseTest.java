@@ -1,5 +1,6 @@
 package com.globant.academy.utils.baseTest;
 
+import com.globant.academy.screens.HomeScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
@@ -21,6 +22,7 @@ public class BaseTest {
     public void setupEnvironment() {
         UiAutomator2Options capabilities = new UiAutomator2Options();
         loadProperties();
+        setUpCapabilities(capabilities);
 
         try {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), capabilities);
@@ -48,6 +50,10 @@ public class BaseTest {
 
     public String getCapabilities(String variable) {
         return properties.getProperty(variable);
+    }
+
+    public HomeScreen loadSplashScreen() {
+        return new HomeScreen(driver);
     }
 
     @AfterMethod
