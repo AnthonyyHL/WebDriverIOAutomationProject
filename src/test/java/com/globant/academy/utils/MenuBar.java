@@ -26,6 +26,7 @@ public class MenuBar extends BaseScreen {
 
     public LoginScreen goToLoginScreen(AndroidDriver driver) {
         waitToBeClickable(loginButton);
+        loginButton.click();
         return new LoginScreen(driver);
     }
 }
