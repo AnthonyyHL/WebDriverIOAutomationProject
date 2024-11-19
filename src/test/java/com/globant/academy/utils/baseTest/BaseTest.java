@@ -10,10 +10,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
+    protected static final Logger log = LogManager.getLogger(String.valueOf(BaseTest.class));
     private static String PROPERTIES_FILE = "src/test/resources/config.properties";
     private static Properties properties = new Properties();
     public static AndroidDriver driver;
