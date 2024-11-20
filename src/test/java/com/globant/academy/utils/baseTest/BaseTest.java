@@ -12,8 +12,8 @@ import java.util.Properties;
 
 import java.util.logging.Logger;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
     protected static final Logger log = Logger.getLogger(BaseTest.class.getName());
@@ -21,7 +21,7 @@ public class BaseTest {
     private static Properties properties = new Properties();
     public static AndroidDriver driver;
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeTest(alwaysRun = true)
     public void setupEnvironment() {
         UiAutomator2Options capabilities = new UiAutomator2Options();
         loadProperties();
@@ -59,7 +59,7 @@ public class BaseTest {
         return new HomeScreen(driver);
     }
 
-    @AfterMethod
+    @AfterTest
     public void quitServer() {
         driver.quit();
     }

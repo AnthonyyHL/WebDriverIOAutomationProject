@@ -14,7 +14,7 @@ public class SignUpSuccessfullyPopUp extends BasePopUp {
         return new SignUpScreen(getDriver());
     }
 
-    public boolean isSignUpSuccessfull(String expectedText) {
+    public boolean isSignUpSuccessful(String expectedText) {
         return getMessage().toLowerCase().equals(expectedText.toLowerCase());
     }
 }
