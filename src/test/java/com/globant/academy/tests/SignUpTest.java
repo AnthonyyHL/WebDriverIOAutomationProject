@@ -39,7 +39,7 @@ public class SignUpTest extends BaseTest {
 
             signUpScreen = signUpSuccessfullyPopUp.acceptSignUpPopUp();
 
-        } catch(Exception e) {
+        } catch(RuntimeException e) {
             softAssert.fail("Unexpected failure: " + e.getMessage());
         }
 

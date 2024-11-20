@@ -2,6 +2,7 @@
     <test name="WebDriverIO Automation">
         <classes>
             <class name="com.globant.academy.tests.SignUpTest"/>
+            <class name="com.globant.academy.tests.LoginTest"/>
         </classes>
     </test>
 </suite>
