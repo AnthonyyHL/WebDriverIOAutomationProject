@@ -1,6 +1,7 @@
 package com.globant.academy.utils;
 
 import com.globant.academy.screens.LoginScreen;
+import com.globant.academy.screens.SwipeCardsScreen;
 import com.globant.academy.utils.baseScreen.BaseScreen;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -28,5 +29,11 @@ public class MenuBar extends BaseScreen {
         waitToBeClickable(loginButton);
         loginButton.click();
         return new LoginScreen(driver);
+    }
+
+    public SwipeCardsScreen goToSwipeScreen(AndroidDriver driver) {
+        waitToBeClickable(swipeButton);
+        swipeButton.click();
+        return new SwipeCardsScreen(driver);
     }
 }

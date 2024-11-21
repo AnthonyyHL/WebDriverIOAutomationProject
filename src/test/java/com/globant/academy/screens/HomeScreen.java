@@ -27,4 +27,8 @@ public class HomeScreen extends BaseScreen {
     public LoginScreen navigateToLoginScreen() {
         return navBar.goToLoginScreen(getDriver());
     }
+
+    public SwipeCardsScreen navigateToSwipeScreen() {
+        return navBar.goToSwipeScreen(getDriver());
+    }
 }

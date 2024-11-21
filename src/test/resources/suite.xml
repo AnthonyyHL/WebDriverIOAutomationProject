@@ -3,6 +3,7 @@
         <classes>
             <class name="com.globant.academy.tests.SignUpTest"/>
             <class name="com.globant.academy.tests.LoginTest"/>
+            <class name="com.globant.academy.tests.SwipeCardsTest"/>
         </classes>
     </test>
 </suite>
